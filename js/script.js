@@ -38,6 +38,28 @@
     });
   });
 
+  // Career duration (입사일 기준 자동 계산 — 시간이 지날수록 자동으로 증가)
+  // 입사일을 바꾸려면 아래 연/월/일만 수정하세요. (월은 0부터: 11 = 12월)
+  const JOIN_DATE = new Date(2023, 11, 1); // 2023-12-01
+
+  (function updateCareerDuration() {
+    const now = new Date();
+    let months =
+      (now.getFullYear() - JOIN_DATE.getFullYear()) * 12 +
+      (now.getMonth() - JOIN_DATE.getMonth());
+    if (now.getDate() < JOIN_DATE.getDate()) months -= 1;
+    if (months < 0) months = 0;
+
+    const years = Math.floor(months / 12);
+    const restMonths = months % 12;
+
+    const chip = document.getElementById("exp-chip");
+    if (chip) chip.textContent = `경력 ${years}년 ${restMonths}개월 ~`;
+
+    const stat = document.getElementById("exp-years-stat");
+    if (stat) stat.innerHTML = `${(months / 12).toFixed(1)}<small>년</small>`;
+  })();
+
   // Scroll reveal animation
   const revealEls = document.querySelectorAll(".reveal");
   const revealObserver = new IntersectionObserver(
