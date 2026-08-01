@@ -278,44 +278,51 @@
       <div class="project-card reveal">
         <div class="project-card-head">
           <div>
-            <h3>모바일 청첩장 메이커</h3>
+            <h3>별빛 초대장 · 모바일 초대장 메이커</h3>
             <p class="project-org">개인 프로젝트 &nbsp;·&nbsp; AI 바이브코딩(Claude) &nbsp;·&nbsp; 기획 · 디자인</p>
           </div>
-          <span class="project-period">2026.06</span>
+          <span class="project-period">2026.06 ~ 진행중</span>
         </div>
 
         <p class="project-desc">
-          템플릿을 고르고 내용을 입력하면 나만의 모바일 청첩장이 완성되는 웹 서비스입니다.
-          완성된 청첩장은 고유 링크로 발급되어 카카오톡으로 바로 공유할 수 있으며, 하객은 앱 설치 없이 링크만 열면 됩니다.
+          결혼식·돌잔치·칠순 잔치·생일까지, 템플릿을 고르고 내용을 입력하면 나만의 모바일 초대장이 완성되는 웹 서비스입니다.
+          완성된 초대장은 고유 링크로 발급되어 카카오톡으로 바로 공유할 수 있으며, 하객은 앱 설치 없이 링크만 열면 됩니다.
           <strong>Claude를 활용한 AI 바이브코딩</strong>으로 개발한 프로젝트로, 서비스 기획과 화면 구성을 직접 설계하고
           AI와 협업해 프론트엔드·백엔드(PostgreSQL 기반 Supabase)를 구현한 뒤 Vercel로 배포했습니다.
+          개인 사진과 가족 정보를 다루는 만큼 <strong>행사 다음 날 자동 완전 삭제</strong>, 24시간 세션 만료 등
+          데이터 수명 정책을 직접 설계해 적용했습니다.
         </p>
 
         <h4 class="project-subtitle">주요 기능</h4>
         <ul class="project-list">
-          <li>4가지 감성 템플릿(클래식·모던·로맨틱·보타니컬)</li>
+          <li>4가지 초대장 종류(결혼·돌잔치·칠순/팔순·생일)별 전용 템플릿 24종</li>
           <li>입력 즉시 반영되는 실시간 미리보기</li>
-          <li>대표 사진·갤러리 업로드 및 자동 압축 저장</li>
-          <li>PostgreSQL(Supabase) 기반 데이터 저장·조회</li>
-          <li>카카오맵 길찾기, 계좌 안내 기능</li>
+          <li>대표 사진 모션 4종, 한글 글꼴 9종 선택</li>
+          <li>대표 사진·갤러리(최대 20장) 업로드 및 클라이언트 압축 후 저장</li>
+          <li>카카오·네이버 소셜 로그인 및 마이페이지 수정·삭제</li>
+          <li>PostgreSQL(Supabase) 기반 데이터 저장·조회, Storage 사진 관리</li>
+          <li>네이버지도·카카오맵 길찾기, 계좌 안내, 디데이 카운트다운</li>
           <li>고유 공유 링크 발급 및 카톡 OG 미리보기</li>
+          <li>Vercel Cron 기반 만료 초대장·사진 자동 정리(매일 00:30 KST)</li>
           <li>모바일 최적화 반응형 UI</li>
         </ul>
 
         <h4 class="project-subtitle">사용 기술</h4>
         <div class="badges">
-          <span class="badge">Next.js</span>
-          <span class="badge">React</span>
+          <span class="badge">Next.js 16</span>
+          <span class="badge">React 19</span>
           <span class="badge">TypeScript</span>
           <span class="badge">Tailwind CSS</span>
           <span class="badge">Supabase</span>
           <span class="badge">PostgreSQL</span>
+          <span class="badge">Supabase Auth</span>
           <span class="badge">Vercel</span>
+          <span class="badge">Vercel Cron</span>
           <span class="badge">AI 바이브코딩</span>
         </div>
 
         <div class="project-links">
-          <a class="project-link" href="https://wedding-invite-rose-six.vercel.app" target="_blank" rel="noopener">
+          <a class="project-link" href="https://starinvite.vercel.app" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
             Live Demo
           </a>
