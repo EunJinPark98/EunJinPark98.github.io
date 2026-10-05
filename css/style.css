@@ -806,3 +806,5 @@ img { max-width: 100%; display: block; }
 
   .hero { min-height: auto; padding: 48px 0 40px; }
 }
+
+.mini-grid.mini-grid-single { grid-template-columns: 1fr; }
